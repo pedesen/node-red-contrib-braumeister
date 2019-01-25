@@ -1,0 +1,34 @@
+<script type="text/javascript">
+RED.nodes.registerType("recipes", {
+  category: "braumeister",
+  color: "#FFCC66",
+  defaults: {
+    name: { value: "" },
+    server: { value: "", type: "braumeister-server" }
+  },
+  inputs: 1,
+  outputs: 1,
+  icon: "braumeister.png",
+  label: function() {
+    return this.name || "recipes";
+  }
+});
+</script>
+
+<script type="text/x-red" data-template-name="recipes">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name" />
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Server</label>
+        <input type="text" id="node-input-server" placeholder="Server" />
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="recipes">
+<p>
+  A node that does an HTTP request to Speidels Braumeister and returns a list of
+  stored recipes.
+</p>;
+</script>

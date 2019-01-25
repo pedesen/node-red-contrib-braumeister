@@ -1,0 +1,20 @@
+<script type="text/javascript">
+RED.nodes.registerType("braumeister-server", {
+  category: "config",
+  defaults: {
+    host: { value: "", required: true }
+  },
+  label: function() {
+    return this.host;
+  }
+});
+</script>
+
+<script type="text/x-red" data-template-name="braumeister-server">
+<div class="form-row">
+  <label for="node-config-input-host">
+    <i class="icon-bookmark" /> Host
+  </label>
+  <input type="text" id="node-config-input-host" />
+</div>;
+</script>
