@@ -1,6 +1,12 @@
 # Node-RED Braumeister
 
-Basic [Node-RED](https://nodered.org) for interacting with Speidels Braumeister homebrewing system
+Basic [Node-RED](https://nodered.org) for interacting with Speidels Braumeister homebrewing system. When a BRAUMEISTERmobil WiFi module is installed, it is running a webserver with a rudimentary API. It provides measurement data like temperature or pump status as well as a list of stored recipes.
+
+## Requirements
+
+* Braumeister brewing equipment
+* BRAUMEISTERmobil WiFi extension module
+* Node-RED
 
 ## braumeister node
 
