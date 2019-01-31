@@ -2,7 +2,11 @@
   "name": "node-red-contrib-braumeister",
   "version": "0.0.2",
   "description": "Node-RED braumeister nodes",
-  "keywords": ["node-red", "homebrew", "braumeister"],
+  "keywords": [
+    "node-red",
+    "homebrew",
+    "braumeister"
+  ],
   "main": "nodes/braumeister.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +23,8 @@
       "braumeister-server": "nodes/braumeister-server.js",
       "recipes": "nodes/recipes.js"
     }
+  },
+  "dependencies": {
+    "request": "^2.88.0"
   }
 }
