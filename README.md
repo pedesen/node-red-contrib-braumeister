@@ -41,9 +41,7 @@ This node converts this string into an object containing measurement data / stat
 
 ![recipes node](docs/node-recipes.png)
 
-This node does an HTTP request to the Braumeisters `/rz.txt` file.
-
-So far this returns a list of recipe strings, which look like this:
+This node does an HTTP request to the Braumeisters `/rz.txt` file. The response is an array of csv-like strings:
 
 ```
 [
@@ -54,8 +52,8 @@ So far this returns a list of recipe strings, which look like this:
 ]
 ```
 
-These strings need to be further "decrypted", contributions welcome ;)
+(See [/rz.txt](docs/rz.txt.md) for more details what these values stand for.)
 
 ## Contributions
 
-Contributions are always welcome! I need help further decrypting the `/rz.txt` and [/bm.txt](`docs/bm.txt.md`) response files.
+Contributions are always welcome! I need help further decrypting the [/bm.txt](`docs/bm.txt.md`) response files.
