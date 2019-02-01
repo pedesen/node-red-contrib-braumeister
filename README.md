@@ -70,7 +70,7 @@ This node does an HTTP request to the Braumeister's `/rz.txt` file, parses the r
 ]
 ```
 
-These strings need to be further "decrypted", contributions welcome ;)
+(See [/rz.txt](docs/rz.txt.md) for more details what these values stand for.)
 
 ## Contributions
 
