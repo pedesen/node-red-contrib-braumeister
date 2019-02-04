@@ -4,15 +4,15 @@ Basic [Node-RED](https://nodered.org) nodes for interacting with Speidels Braume
 
 ## Requirements
 
-* Braumeister brewing equipment
-* BRAUMEISTERmobil WiFi extension module
-* Node-RED
+- Braumeister brewing equipment
+- BRAUMEISTERmobil WiFi extension module
+- Node-RED
 
 ## braumeister node
 
 ![braumeister node](docs/node-braumeister.png)
 
-This node does an HTTP request to the Braumeisters `/bm.txt` file. The response is a txt file containing a csv-like string:
+This node does an HTTP request to the Braumeister's `/bm.txt` file. The response is a txt file containing a csv-like string:
 
 ```
 "V1.1.27 Sep 12 2018;0004A30B003FA809;0X13:13XCX2930X0X 72.5X0X2234X1X1X5X0X191XA00SXpiX000X0X0X0"
@@ -41,14 +41,32 @@ This node converts this string into an object containing measurement data / stat
 
 ![recipes node](docs/node-recipes.png)
 
-This node does an HTTP request to the Braumeisters `/rz.txt` file. The response is an array of csv-like strings:
+This node does an HTTP request to the Braumeister's `/rz.txt` file, parses the recipes and returns them in an array of objects:
 
 ```
 [
-  "0X40X65X90X78X15X78X0X78X0X78X0X15X100X15X0X0",
-  "1X38X63X0X63X40X72X20X78X15X78X0X80X100X70X40X5",
-  "2X38X52X5X63X5X72X5X78X5X78X0X80X100X60X30X2",
-  "3X40X52X15X63X90X72X15X78X20X78X0X60X102X55X40X1"
+  {
+      index: 0,
+      mesh_in_temperature: 45,
+      step_1_temperature: 50,
+      step_1_time: 15,
+      step_2_temperature: 60,
+      step_2_time: 20,
+      step_3_temperature: 70,
+      step_3_time: 15,
+      step_4_temperature: 75,
+      step_4_time: 5,
+      boiling_time: 30,
+      boiling_temperature: 100,
+      hop_1_time: 5,
+      hop_2_time: 10,
+      hop_3_time: 15,
+      hop_4_time: 0,
+      hop_5_time: 0,
+      hop_6_time: 0,
+      beer_name: "Doubly Hoeppi"
+    },
+    {...}
 ]
 ```
 
@@ -56,4 +74,4 @@ This node does an HTTP request to the Braumeisters `/rz.txt` file. The response 
 
 ## Contributions
 
-Contributions are always welcome! I need help further decrypting the [/bm.txt](`docs/bm.txt.md`) response files.
+Contributions are always welcome! I need help further decrypting the [/bm.txt](`docs/bm.txt.md`) response file.
