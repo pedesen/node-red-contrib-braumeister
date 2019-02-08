@@ -70,8 +70,6 @@ This node does an HTTP request to the Braumeister's `/rz.txt` file, parses the r
 ]
 ```
 
-(See [/rz.txt](docs/rz.txt.md) for more details what these values stand for.)
-
 ## Contributions
 
 Contributions are always welcome! I need help further decrypting the [/bm.txt](`docs/bm.txt.md`) response file.
