@@ -34,7 +34,8 @@ module.exports = function(RED) {
             firmware_version: body[0],
             language: Number(data[0]),
             local_time: data[1],
-            status: Number(data[2]),
+            temperature_unit: data[2],
+            status: Number(data[3]),
             temperature_target: Number(data[4]) / 10,
             temperature_current: Number(data[5]),
             time_target: Number(data[6]),
@@ -42,14 +43,15 @@ module.exports = function(RED) {
             recipe: Number(data[9]),
             rast: Number(data[10]),
             hop: Number(data[11]),
-            progress: Number(data[12]) / 318 * 100,
+            progress: Math.round(Number(data[12]) / 318 * 100),
             buttons: data[13],
             pump: { p: "off", P: "on", q: "inactive" }[data[14][0]],
             heating: { h: "off", H: "on", i: "inactive" }[data[14][1]],
             interrupt: interrupt,
             cover: cover,
             beep: beep,
-            nexthop: Number(data[18]),
+            editmode: editmode,
+            nexthop: Number(data[18]) === 65535 ? 0 : Number(data[18]),
             source_string: response.body
           };
 
