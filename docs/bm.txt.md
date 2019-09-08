@@ -17,26 +17,28 @@ When splitting the whole string by `;` we get:
 When splitting `[2]` by `"X"` we get:
 
 ```js
-0: "0"
-1: "13:13"
-2: "C"
-3: "2930"
-4: "0"      // target temperature (in °C)
+0: "0"      // language
+1: "13:13"  // time
+2: "C"      // temperature unit
+3: "2930"   // status code
+4: "0"      // target temperature (in °C) but * 10
 5: " 72.5"  // current temperature (in °C)
 6: "0"      // target time (in s)
 7: "2234"   // time elapsed (in s)
 8: "1"
-9: "1"
-10: "5"
-11: "0"
-12: "191"
-13: "A00S"
-14: "pi"   // [0]: pump { p: 'off', P: 'on', q: 'inactive' }
-		   // [1]: heating { h: 'off', H: 'on', i: 'inactive' }
-15: "000"
+9: "1"      // recipe
+10: "5"     // # rast
+11: "0"     // # hop
+12: "191"   // progress (318 = 100%)
+13: "A00S"  // buttons
+14: "pi"    // [0]: pump { p: 'off', P: 'on', q: 'inactive' }
+            // [1]: heating { h: 'off', H: 'on', i: 'inactive' }
+15: "000"   // interrupt [0] = 0/1
+            //           [1] = 'D' -> cover / beep else beep
+            //           [2] = edit-mode
 16: "0"
 17: "0"
-18: "0"
+18: "0"     // min to next hop
 ```
 
 ## Contributions welcome!
