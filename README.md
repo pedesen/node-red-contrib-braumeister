@@ -72,4 +72,4 @@ This node does an HTTP request to the Braumeister's `/rz.txt` file, parses the r
 
 ## Contributions
 
-Contributions are always welcome! I need help further decrypting the [/bm.txt](`docs/bm.txt.md`) response file.
+Contributions are always welcome! I need help further decrypting the [/bm.txt](docs/bm.txt.md) response file.
