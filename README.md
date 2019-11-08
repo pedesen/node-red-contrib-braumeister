@@ -2,6 +2,8 @@
 
 Basic [Node-RED](https://nodered.org) nodes for interacting with Speidels Braumeister homebrewing system. When a BRAUMEISTERmobil WiFi module is installed, it is running a web server with a rudimentary API. It provides measurement data like temperature or pump status as well as a list of stored recipes.
 
+## &#x1F534; This doesn't work with the newest Braumeister firmware 1.1.27 &#x1F534;
+
 ## Requirements
 
 - Braumeister brewing equipment
