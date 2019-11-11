@@ -6,7 +6,7 @@ Basic [Node-RED](https://nodered.org) nodes for interacting with Speidels Braume
 
 ## Requirements
 
-- Braumeister brewing equipment
+- Braumeister brewing equipment with firmware earlier than 1.1.27
 - BRAUMEISTERmobil WiFi extension module
 - Node-RED
 
